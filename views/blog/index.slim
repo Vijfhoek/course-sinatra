@@ -1,0 +1,23 @@
+- @posts.each do |post|
+  article.type-system-geometric
+    - puts post.inspect
+    h1.title = post.title
+    p.info
+      span By 
+      strong = post.author
+      span  - 
+      a href="/blog/#{post.id}"
+        i = post.created_at
+      span  || 
+      a href="/blog/update/#{post.id}" Edit
+      span  || 
+      a href="/blog/destroy/#{post.id}" DESTROY
+    p.body
+      - if post.body.to_s.length < 100
+        = post.body
+      - else
+        = "#{post.body[0, 100]}... "
+        a href="/blog/#{post.id}" Read more
+  hr
+
+a href="/blog/create" Create new post!

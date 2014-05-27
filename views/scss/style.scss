@@ -1,0 +1,15 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "bootstrap";
+@import "neat/neat";
+
+/*$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: em(720);*/
+
+body {
+	height: 100%;
+	background: url('/img/congruent_outline_inv.png');
+}
+

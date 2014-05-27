@@ -1,0 +1,13 @@
+h2 New post
+
+form role="form" action="/blog/update" method="post"
+  .form-group
+    label for="title" Title
+    input.form-control#title name="post[title]" placeholder="Title"
+  .form-group
+    label for="author" Author
+    input.form-control#author name="post[author]" placeholder="Author"
+  .form-group
+    label for="content" Content
+    textarea.form-control#content name="post[body]" placeholder="Content"
+  input type="button" value="Create post!"
