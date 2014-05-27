@@ -3,7 +3,8 @@ html
   head
     title Home
     link href="/style.css" rel="stylesheet"
-
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+    script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"
   body
     nav.navbar.navbar-inverse.navbar-static-top role="navigation"
       .container-fluid
@@ -15,13 +16,30 @@ html
             span.icon-bar
           a.navbar-brand href="#" Vijfhoek
         .collapse.navbar-collapse
-          ul.nav.navbar-nav
+          ul.nav.navbar-nav.navbar-right
             li class=("active" if @active == "home")
               a href="/" Home
             li class=("active" if @active == "about")
               a href="/about" About
             li class=("active" if @active == "blog")
               a href="/blog" Blog
+            li.dropdown
+              a.dropdown-toggle href="#" data-toggle="dropdown"
+                span Sign In
+                strong.caret
+              ul.dropdown-menu.login-dropdown
+                form method="post" action="/login" accept-charset="UTF-8"
+                  li
+                    input#login_username type="text" name="user[username]" size="30"
+                  li
+                    input#login_password type="password" name="user[password]" size="30"
+
+                  li
+                    input#login_remember type="checkbox" name="user[remember]" value="0"
+                    label#login_lbl_remember.string.optional for="login_remember" Remember me
+
+                  li
+                    input.btn.btn-primary#login_button type="submit" name="commit" value="Sign in!"
 
     .container
       == yield

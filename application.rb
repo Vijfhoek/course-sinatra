@@ -71,6 +71,11 @@ get "/blog/destroy/:id" do
 	redirect "/blog"
 end
 
+# Login
+get "/login" do
+	slim :"login"
+end
+
 
 get "/*" do
 	@active = params[:splat][0]
