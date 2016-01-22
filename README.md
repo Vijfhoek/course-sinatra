@@ -1,4 +1,4 @@
 course-sinatra
 ==============
 
-A blog made in a course about Sinatra
+A blog-like thingy made in a course about Sinatra. Never really finished it.
